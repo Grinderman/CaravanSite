@@ -22,28 +22,33 @@ export default function HemsbyCaravanRental() {
   const photos = [
     {
       title: "Main Living Area",
-      src: "/images/lounge.svg",
+      src: "/images/lounge.jpg",
       alt: "Main living area inside the caravan",
       className: "md:col-span-2 md:row-span-2",
     },
     {
       title: "Kitchen",
-      src: "/images/kitchen.svg",
+      src: "/images/kitchen.jpg",
+      alt: "Kitchen inside the caravan",
+    },
+{
+      title: "Dining",
+      src: "/images/dining.jpg",
       alt: "Kitchen inside the caravan",
     },
     {
       title: "Bedroom",
-      src: "/images/bedroom.svg",
+      src: "/images/bedroom.jpg",
       alt: "Bedroom inside the caravan",
     },
     {
       title: "Shower Room",
-      src: "/images/shower.svg",
+      src: "/images/shower.jpg",
       alt: "Shower room inside the caravan",
     },
     {
       title: "Outdoor Area",
-      src: "/images/outside.svg",
+      src: "/images/outside.jpg",
       alt: "Outdoor area around the caravan",
     },
   ];
