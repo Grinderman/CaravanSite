@@ -159,7 +159,11 @@ export default function HemsbyCaravanRental() {
             <MapPin className="h-10 w-10 text-sky-700" />
             <h3 className="mt-4 text-2xl font-bold">Seafield Caravan Park</h3>
             <p className="mt-2 text-slate-600">Newport Road, Hemsby, Norfolk</p>
-            <div className="mt-6 rounded-2xl bg-slate-100 p-5 text-slate-600">Replace this panel with an embedded Google Map or an image of the caravan/location.</div>
+            <img
+              src="/images/location.png"
+              alt="Map showing caravan location"
+              className="mt-6 w-full rounded-2xl object-cover shadow-sm"
+            />
           </div>
         </div>
       </section>
