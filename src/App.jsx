@@ -4,12 +4,12 @@ import { Wifi, Car, PawPrint, Users, MapPin, KeyRound, Utensils, ShowerHead, Bed
 
 export default function HemsbyCaravanRental() {
   const features = [
-    { icon: Wifi, title: "Wi‑Fi Included", text: "Stay connected during your seaside break." },
+    { icon: Wifi, title: "Wi-Fi Included", text: "Stay connected during your seaside break." },
     { icon: Car, title: "Parking Available", text: "Convenient parking for guests on site." },
     { icon: PawPrint, title: "Pet Friendly", text: "Bring your four-legged friend along." },
     { icon: Users, title: "Sleeps Up To 6", text: "Ideal for families, couples, and small groups." },
     { icon: Utensils, title: "Full Kitchen", text: "Everything you need for simple meals and snacks." },
-    { icon: ShowerHead, title: "Shower & En‑Suite Toilet", text: "Comfortable facilities, including en‑suite access from the main room." },
+    { icon: ShowerHead, title: "Shower & En-Suite Toilet", text: "Comfortable facilities, including en-suite access from the main room." },
   ];
 
   const highlights = [
@@ -53,7 +53,7 @@ export default function HemsbyCaravanRental() {
                   <p className="mt-2 text-slate-700">Newport Road, Hemsby</p>
                 </div>
                 <div className="grid grid-cols-3 gap-3 text-center text-sm font-semibold">
-                  <div className="rounded-2xl bg-white p-3 shadow-sm">Wi‑Fi</div>
+                  <div className="rounded-2xl bg-white p-3 shadow-sm">Wi-Fi</div>
                   <div className="rounded-2xl bg-white p-3 shadow-sm">Parking</div>
                   <div className="rounded-2xl bg-white p-3 shadow-sm">Pets</div>
                 </div>
@@ -77,7 +77,7 @@ export default function HemsbyCaravanRental() {
           </div>
           <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
             <KeyRound className="mb-4 h-8 w-8 text-sky-700" />
-            <h3 className="text-xl font-bold">Easy Check‑In</h3>
+            <h3 className="text-xl font-bold">Easy Check-In</h3>
             <p className="mt-3 text-slate-600">A lockbox is available, with key details sent on the morning of your arrival.</p>
           </div>
         </div>
