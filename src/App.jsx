@@ -19,6 +19,35 @@ export default function HemsbyCaravanRental() {
     "Lockbox check-in details provided on the morning of your stay",
   ];
 
+  const photos = [
+    {
+      title: "Main Living Area",
+      src: "/images/lounge.svg",
+      alt: "Main living area inside the caravan",
+      className: "md:col-span-2 md:row-span-2",
+    },
+    {
+      title: "Kitchen",
+      src: "/images/kitchen.svg",
+      alt: "Kitchen inside the caravan",
+    },
+    {
+      title: "Bedroom",
+      src: "/images/bedroom.svg",
+      alt: "Bedroom inside the caravan",
+    },
+    {
+      title: "Shower Room",
+      src: "/images/shower.svg",
+      alt: "Shower room inside the caravan",
+    },
+    {
+      title: "Outdoor Area",
+      src: "/images/outside.svg",
+      alt: "Outdoor area around the caravan",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <section className="relative overflow-hidden bg-gradient-to-br from-sky-900 via-sky-700 to-cyan-600 text-white">
@@ -38,27 +67,18 @@ export default function HemsbyCaravanRental() {
               <a href="#booking" className="rounded-2xl bg-white px-6 py-3 text-center font-semibold text-sky-800 shadow-lg transition hover:bg-sky-50">
                 Enquire About Dates
               </a>
-              <a href="#features" className="rounded-2xl border border-white/50 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10">
-                View Features
+              <a href="#gallery" className="rounded-2xl border border-white/50 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10">
+                View Photos
               </a>
             </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1 }} className="rounded-[2rem] bg-white/15 p-4 shadow-2xl backdrop-blur">
-            <div className="aspect-[4/3] rounded-[1.5rem] bg-gradient-to-br from-amber-100 via-sky-100 to-cyan-200 p-8 text-slate-800 shadow-inner">
-              <div className="flex h-full flex-col justify-between rounded-3xl border border-white/70 bg-white/65 p-6">
-                <div>
-                  <MapPin className="mb-4 h-10 w-10 text-sky-700" />
-                  <h2 className="text-2xl font-bold">Seafield Caravan Park</h2>
-                  <p className="mt-2 text-slate-700">Newport Road, Hemsby</p>
-                </div>
-                <div className="grid grid-cols-3 gap-3 text-center text-sm font-semibold">
-                  <div className="rounded-2xl bg-white p-3 shadow-sm">Wi-Fi</div>
-                  <div className="rounded-2xl bg-white p-3 shadow-sm">Parking</div>
-                  <div className="rounded-2xl bg-white p-3 shadow-sm">Pets</div>
-                </div>
-              </div>
-            </div>
+            <img
+              src="/images/outside.svg"
+              alt="Caravan preview"
+              className="aspect-[4/3] w-full rounded-[1.5rem] object-cover shadow-inner"
+            />
           </motion.div>
         </div>
       </section>
@@ -83,7 +103,43 @@ export default function HemsbyCaravanRental() {
         </div>
       </section>
 
-      <section id="features" className="bg-white py-16">
+      <section id="gallery" className="bg-white py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">Photo gallery</p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Take a look inside your seaside stay</h2>
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Replace the placeholder files in <strong>public/images</strong> with your real caravan photos when you have them.
+              </p>
+            </div>
+            <a href="#booking" className="rounded-2xl bg-sky-700 px-6 py-3 text-center font-semibold text-white shadow-sm transition hover:bg-sky-800">
+              Check Availability
+            </a>
+          </div>
+
+          <div className="mt-10 grid auto-rows-[220px] gap-4 md:grid-cols-4">
+            {photos.map((photo) => (
+              <div key={photo.title} className={`group relative overflow-hidden rounded-3xl bg-slate-100 shadow-sm ring-1 ring-slate-200 ${photo.className || ""}`}>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent p-5 text-white">
+                  <h3 className="font-bold">{photo.title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 rounded-3xl bg-sky-50 p-5 text-sm text-slate-700 ring-1 ring-sky-100">
+            <strong>Photo replacement tip:</strong> keep the same filenames or update the image paths in <code>src/App.jsx</code>. Recommended names: <code>lounge.jpg</code>, <code>kitchen.jpg</code>, <code>bedroom.jpg</code>, <code>shower.jpg</code>, and <code>outside.jpg</code>.
+          </div>
+        </div>
+      </section>
+
+      <section id="features" className="bg-slate-50 py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">What’s included</p>
@@ -93,7 +149,7 @@ export default function HemsbyCaravanRental() {
             {features.map((feature) => {
               const Icon = feature.icon;
               return (
-                <div key={feature.title} className="rounded-3xl border border-slate-200 bg-slate-50 p-6 transition hover:-translate-y-1 hover:shadow-md">
+                <div key={feature.title} className="rounded-3xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md">
                   <Icon className="h-8 w-8 text-sky-700" />
                   <h3 className="mt-4 text-lg font-bold">{feature.title}</h3>
                   <p className="mt-2 text-slate-600">{feature.text}</p>
