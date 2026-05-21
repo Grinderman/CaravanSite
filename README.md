@@ -4,12 +4,9 @@ A Vite + React + Tailwind website ready to deploy to Vercel.
 
 This version includes:
 - Fixed Tailwind/PostCSS configuration for Vercel
-- Professional image gallery
-- Placeholder image files already wired in
-- Homepage hero section
-- Features section
-- Location section
-- Enquiry form placeholder
+- JPG photo placeholders already connected
+- Added Dining Area photo slot
+- Removed the photo replacement tip from the page
 
 ## Replacing the photos
 
@@ -19,39 +16,18 @@ Go to:
 public/images
 ```
 
-You will see these placeholder files:
-
-```text
-lounge.svg
-kitchen.svg
-bedroom.svg
-shower.svg
-outside.svg
-```
-
-The easiest method is to replace them with your own images using the same names, or update the paths in `src/App.jsx`.
-
-Recommended real image names:
+Replace these JPG files with your real photos using the same filenames:
 
 ```text
 lounge.jpg
 kitchen.jpg
+dining.jpg
 bedroom.jpg
 shower.jpg
 outside.jpg
 ```
 
-If you use JPG files, update the paths in `src/App.jsx` from:
-
-```jsx
-/images/lounge.svg
-```
-
-to:
-
-```jsx
-/images/lounge.jpg
-```
+Keep the filenames exactly the same and the website will update automatically after GitHub/Vercel redeploys.
 
 ## Vercel settings
 
