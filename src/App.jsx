@@ -30,6 +30,32 @@ export default function HemsbyCaravanRental() {
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+          <a href="#" className="text-lg font-bold text-white">
+            Hemsby Seaside Caravan
+          </a>
+
+          <nav className="flex items-center gap-3">
+            <a
+              href="#gallery"
+              className="rounded-2xl px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-white/10"
+            >
+              Gallery
+            </a>
+
+            <a
+              href="https://www.airbnb.co.uk/rooms/1628911551453079408"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl bg-rose-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-rose-700"
+            >
+              Availability & Prices
+            </a>
+          </nav>
+        </div>
+      </header>
+
       <section className="relative overflow-hidden bg-gradient-to-br from-sky-900 via-sky-700 to-cyan-600 text-white">
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_left,_white,_transparent_35%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center lg:px-8">
@@ -75,7 +101,7 @@ export default function HemsbyCaravanRental() {
             <div className="max-w-2xl">
               <p className="text-sm font-semibold uppercase tracking-wide text-sky-700">Photo gallery</p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Take a look inside your seaside stay</h2>
-              <p className="mt-4 text-lg leading-8 text-slate-600">A clean, professional gallery to showcase the lounge, kitchen, dining area, bedroom, shower room, and outside space.</p>
+              
             </div>
             <a href="#booking" className="rounded-2xl bg-sky-700 px-6 py-3 text-center font-semibold text-white shadow-sm transition hover:bg-sky-800">Check Availability</a>
           </div>
