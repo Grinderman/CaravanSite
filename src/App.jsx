@@ -180,7 +180,20 @@ export default function HemsbyCaravanRental() {
               <label className="grid gap-2 text-sm font-semibold">Name<input className="rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-sky-600" placeholder="Your name" /></label>
               <label className="grid gap-2 text-sm font-semibold">Email<input type="email" className="rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-sky-600" placeholder="you@example.com" /></label>
               <label className="grid gap-2 text-sm font-semibold">Message<textarea className="min-h-28 rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-sky-600" placeholder="Tell us your preferred dates and number of guests" /></label>
-              <button type="button" className="rounded-2xl bg-sky-700 px-6 py-3 font-semibold text-white transition hover:bg-sky-800">Send Enquiry</button>
+              <div className="flex flex-col gap-3 sm:flex-row">
+              <button type="button" className="rounded-2xl bg-sky-700 px-6 py-3 font-semibold text-white transition hover:bg-sky-800">
+                Send Enquiry
+              </button>
+
+              <a
+                href="https://www.airbnb.co.uk/rooms/1628911551453079408"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl bg-rose-600 px-6 py-3 text-center font-semibold text-white transition hover:bg-rose-700"
+              >
+                View Availability on Airbnb
+              </a>
+            </div>
               <p className="text-xs text-slate-500">This is a front-end form placeholder. Connect it to Airbnb, email, or a booking system before publishing.</p>
             </div>
           </form>
